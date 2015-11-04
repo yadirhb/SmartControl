@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fondo_gris">#475567</color>
+    <color name="letras_gris_claro">#666666</color>
+    <color name="barra_gris_claro">#cccccc</color>
+    <color name="blanco">#ffffff</color>
+    <color name="negro">#000000</color>
+    <color name="rojo">#ff0000</color>
+    
+</resources>

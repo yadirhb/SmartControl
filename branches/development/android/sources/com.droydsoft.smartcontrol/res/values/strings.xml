@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">Smart Control</string>
+    <string name="texto_usuario">USUARIO   </string>
+    <string name="texto_clave">CLAVE     </string>
+    <string name="btn_entrar">Entrar</string>
+    <string name="texto_olvide_calve">¿Olvido su Clave?</string>
+    <string name="btn_enviar">Enviar</string>
+    <string name="texto_policia">Policía</string>
+    <string name="texto_911">911</string>
+    <string name="texto_fuego">Bomberos</string>
+    <string name="texto_politicas_uso">Póliticas de Uso</string>
+    <string name="texto_obtener_clave">Ingrese el Mail habilitado</string>
+    <string name="hint_entre_correo">Entre correo</string>
+    <string name="texto_consulte_clave">Consulte su clave en</string>
+    <string name="btn_filtrar">Filtrar</string>
+    <string name="texto_mostrar_sms">Le informamos que:</string>
+    <string name="texto_emergencia">Emergencia</string>
+    <string name="texto_seleccione_filtro">Seleccionar el filtro para buscar</string>
+    <string name="texto_entre_fecha_inicio">Fecha de Inicio (Ejmp: 5/6/2014)</string>
+    <string name="texto_entre_tipo_evento">Tipo de Evento</string>
+    <string name="texto_entre_fecha_fin">Fecha de Fin (Ejmp: 10/7/2014)</string>
+    <string name="texto_entre_usuario">Usuario</string>
+    <string name="texto_correo">El servicio debe estar previamente habilitado en su edificio, si no lo está, comuníquese con el representante en su ciudad. www.buildingsmartcontrol.com</string>
+    <string name="texto_ayuda_medica">Ayuda Médica</string>
+    <string name="hint_a_definir">A Definir</string>
+    <string-array name="notificaciones_valores_mostrar">
+        <item>Tipo Evento</item>
+        <item>Entrada</item>
+        <item>Salida</item>
+        <item>Entrada Visita</item>
+        <item>Salida Visita</item>
+        <item>Tarjeta Invalida</item>
+        <item>Puerta Abierta</item>
+        <item>Emergencia</item>
+        <item>Entrada con Pulsador</item>
+        <item>Salida con Pulsador</item>
+    </string-array>
+    <string-array name="notificaciones_valores_llaves">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string name="texto_cambiar_clave">Cambiar Clave</string>
+    <string name="hint_confirmar_clave">Confirmar Clave</string>
+    <string name="hint_clave_nueva">Clave Nueva</string>
+    <string name="newStringKey1"/>
+    <string name="politicas">Nuestra política de privacidad describe como recogemos, guardamos o utilizamos la información que recabamos a través de los diferentes servicios disponibles en esta aplicación. Es importante que entienda que información recogemos y como la utilizamos ya que el acceso a esta aplicación implica la aceptación de nuestra política de privacidad.</string>
+</resources>

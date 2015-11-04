@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/TextView10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separador_item_evento"
+        android:background="@color/barra_gris_claro"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/layout_emergencia_emergencia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/img_menu_emergencia_emergencia"
+            android:layout_width="@dimen/alto_titulo_principal"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_4"
+            android:src="@drawable/emergencia" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_menu_emergencia_emergencia1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_emergencia"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/txt_menu_emergencia_numero_emergencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_a_definir" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separador_item_evento"
+        android:background="@color/barra_gris_claro"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/layout_emergencia_policia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/img_menu_emergencia_policia"
+            android:layout_width="@dimen/alto_titulo_principal"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_4"
+            android:src="@drawable/policianew" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimension_30dp"
+                android:text="@string/texto_policia"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/txt_menu_emergencia_numero_policia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_a_definir" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separador_item_evento"
+        android:background="@color/barra_gris_claro"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/layout_emergencia_bomberos"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/img_menu_emergencia_bombero"
+            android:layout_width="@dimen/alto_titulo_principal"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_4"
+            android:src="@drawable/fuegonew" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimension_30dp"
+                android:text="@string/texto_fuego"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/txt_menu_emergencia_numero_bombero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_a_definir" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separador_item_evento"
+        android:background="@color/barra_gris_claro"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <LinearLayout
+        android:id="@+id/layout_emergencia_ayudamedica"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/img_menu_emergencia_ayudamedica"
+            android:layout_width="@dimen/alto_titulo_principal"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_4"
+            android:src="@drawable/ayudamedica" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimension_30dp"
+                android:text="@string/texto_ayuda_medica"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/txt_menu_emergencia_numero_ayudamedica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_a_definir" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separador_item_evento"
+        android:background="@color/barra_gris_claro"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</LinearLayout>

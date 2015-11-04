@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_gris"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/alto_icono"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ambulancia" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dimension_30dp"
+            android:text="ambu"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/ImageView01"
+            android:layout_width="@dimen/alto_icono"
+            android:layout_height="wrap_content"
+            android:src="@drawable/llamar_911" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_911"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/ImageView03"
+            android:layout_width="@dimen/alto_icono"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fuego" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_fuego"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/ImageView02"
+            android:layout_width="@dimen/alto_icono"
+            android:layout_height="wrap_content"
+            android:src="@drawable/policia" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/texto_policia"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </LinearLayout>
+
+</LinearLayout>

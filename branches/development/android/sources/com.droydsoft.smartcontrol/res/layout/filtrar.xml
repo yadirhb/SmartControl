@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_gris"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_filtrar_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_edit"
+            android:ems="10"
+            android:hint="@string/texto_entre_usuario"
+            android:imeOptions="actionNext" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Spinner
+            android:id="@+id/spinner_filtrar_tipo_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/notificaciones_valores_mostrar" />
+
+        <EditText
+            android:id="@+id/edit_filtrar_tipo_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_edit"
+            android:ems="10"
+            android:hint="@string/texto_entre_tipo_evento"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_filtrar_fecha_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_edit"
+            android:ems="10"
+            android:hint="@string/texto_entre_fecha_inicio"
+            android:imeOptions="actionNext"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_filtrar_fecha_fin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_edit"
+            android:ems="10"
+            android:hint="@string/texto_entre_fecha_fin"
+            android:imeOptions="actionNext"
+            android:inputType="date" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_filtrar_filtrar"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="@dimen/margen_4"
+        android:text="@string/btn_filtrar" />
+
+</LinearLayout>
