@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separador_item_evento"
+        android:background="@color/barra_gris_claro" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/img_icon_evento"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margen_4" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_nombre_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="Pedro Grana"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_evento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/letras_gris_claro" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_fecha_evento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="20/10/14"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_hora_evento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top|right"
+                android:text="12:30"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/letras_gris_claro"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/img_audio"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/img_audio"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_foto"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/img_foto"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separador_item_evento"
+        android:background="@color/barra_gris_claro" />
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen_4" >
+
+        <ImageView
+            android:id="@+id/img_icon_evento"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margen_4" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_icon_evento"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_nombre_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="Pedro Grana"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_evento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:text="Visita"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/letras_gris_claro" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_audio"
+            android:layout_toRightOf="@id/ll1"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txt_fecha_evento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="20/10/14"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_hora_evento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="top|right"
+                android:text="12:30"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/letras_gris_claro"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_audio"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_alignBaseline="@+id/img_icon_evento"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/img_foto"
+            android:src="@drawable/img_audio"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/img_foto"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_alignBaseline="@anim/animacion_anti_panico"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/img_foto"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - w6000215_smart2@localhost" uuid="d3199087-308f-4cec-9adb-c2c33e17637f">
+    <database-info product="MySQL" version="5.6.21" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="w6000215_smart2"/>
+    <table name="access" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="access_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="board_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="building_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="access_n" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="access_d" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="access_id"/>
+    </table>
+    <table name="alerts" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="alert_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="alert_uf" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="alert_type" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="alert_coords" sqlType="VARCHAR" precision="450" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="alert_id"/>
+      <index name="alert_id" unique="true" columns="alert_id"/>
+    </table>
+    <table name="buildings" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="building_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="owner_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="owner_desc" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="bld_address" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="bld_city" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="bld_country" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="bld_hansa" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="bld_img" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="bld_map" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <column name="adm_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="adm_mail" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="adm_tel" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="adm_hansa" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="adm_addr" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mng_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mng_mail" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mng_tel" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mng_time" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="building_id"/>
+      <index name="hansa" unique="false" columns="bld_hansa"/>
+    </table>
+    <table name="cards" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="card_id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="card_tz" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="building_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="uf" sqlType="VARCHAR" precision="4" scale="0" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="card_mail" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="card_tel" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="card_status" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="card_img" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="card_id"/>
+      <index name="cards_by_bld" unique="false" columns="building_id"/>
+    </table>
+    <table name="events" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="evt_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="evt_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="evt_time" sqlType="TIME" precision="8" scale="0" nullable="false" jdbcType="92"/>
+      <column name="building_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="card_id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="evt_info" sqlType="VARCHAR" precision="3" scale="0" nullable="false" jdbcType="12"/>
+      <column name="evt_img" sqlType="VARCHAR" precision="400" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="evt_id"/>
+      <index name="events_by_building" unique="false" columns="building_id"/>
+    </table>
+    <table name="login_attempts" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="time" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="members" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userrole" sqlType="VARCHAR" precision="3" scale="0" nullable="false" jdbcType="12"/>
+      <column name="building" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="uf" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="password" sqlType="CHAR" precision="128" scale="0" nullable="false" jdbcType="1"/>
+      <column name="salt" sqlType="CHAR" precision="128" scale="0" nullable="false" jdbcType="1"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="messages" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="msg_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="building_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="uf" sqlType="VARCHAR" precision="4" scale="0" nullable="false" jdbcType="12"/>
+      <column name="msg_author" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="msg_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="msg_title" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="msg_content" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="msg_id"/>
+    </table>
+    <table name="sessions" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="sid" sqlType="VARCHAR" precision="60" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uid" sqlType="VARCHAR" precision="36" scale="0" nullable="false" jdbcType="12"/>
+      <column name="host" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="timestamp" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="user_agent" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12" def="Jyc="/>
+      <column name="salt" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="expire" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="access_token" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="sid"/>
+      <index name="access_token" unique="true" columns="access_token"/>
+    </table>
+    <table name="uf" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="uf_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="uf_name" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uf_cont" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uf_mail" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uf_tel" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="uf_tel2" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uf_birth" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="uf_hansa" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="uf_in" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="uf_out" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="uf_extra1" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uf_extra2" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="uf_extra3" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="uf_id"/>
+      <index name="uf_hansa" unique="true" columns="uf_hansa"/>
+      <index name="uf_id" unique="true" columns="uf_id"/>
+      <index name="uf_cont" unique="false" columns="uf_cont"/>
+      <index name="uf_mail" unique="false" columns="uf_mail"/>
+    </table>
+    <table name="users" schema="" catalog="w6000215_smart2" type="TABLE">
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="email" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="salt" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="username" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="building_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="uf" sqlType="VARCHAR" precision="4" scale="0" nullable="false" jdbcType="12"/>
+      <column name="userrole" sqlType="VARCHAR" precision="3" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="user_id"/>
+      <index name="emails" unique="false" columns="email"/>
+    </table>
+  </data-source>
+</component>

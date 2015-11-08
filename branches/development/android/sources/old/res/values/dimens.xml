@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="alto_icono">100dp</dimen>
+    <dimen name="ancho_titulo">240dp</dimen>
+    <dimen name="alto_edit_usuario">24dp</dimen>
+    <dimen name="margen_4">4dp</dimen>
+    <dimen name="ancho_titulo_principal">160dp</dimen>
+    <dimen name="alto_titulo_principal">45dp</dimen>
+    <dimen name="separador_item_evento">1dp</dimen>
+    <dimen name="alto_iconos_eventos">30dp</dimen>
+    <dimen name="ancho_iconos_eventos">35dp</dimen>
+    <dimen name="dimension_30dp">30dp</dimen>
+    
+</resources>

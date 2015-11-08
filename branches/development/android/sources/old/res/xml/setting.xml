@@ -1,0 +1,108 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="Configuraciones"
+        android:title="Configuraciones" >
+        <PreferenceScreen
+            android:key="notificaciones"
+            android:summary="Configuración de Notificaciones según usuario y tipo de evento."
+            android:title="Notificaciones" >
+            <CheckBoxPreference
+                android:key="notificaciones_activar"
+                android:summary="Podrá configuar para saber cuando se genera un evento nuevo"
+                android:title="Activar Notificaciones" 
+                android:defaultValue="false"/>
+
+            <EditTextPreference
+                android:hint="@string/hint_a_definir"
+                android:key="edit_notificaciones_usuario"
+                android:summary="Usuario del que quiere recibir notificaciones, por defecto son todos."
+                android:title="Usuario" />
+
+            <ListPreference
+                android:entries="@array/notificaciones_valores_mostrar"
+                android:entryValues="@array/notificaciones_valores_llaves"
+                android:key="list_notificaciones_tipo_evento"
+                android:summary="Seleccione el tipo de evento que desea recibir notificaciones, por defecto le llgan todas"
+                android:title="Tipo de Evento" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="anti_panico"
+            android:summary="Defina a que teléfonos o direcciones debe dar aviso (SMS o Mail)"
+            android:title="Anti Pánico" >
+            <PreferenceScreen
+                android:key="anti_panico_aviso1"
+                android:summary="Defina el aviso 1"
+                android:title="Aviso 1" >
+                <EditTextPreference
+                    android:hint="@string/hint_a_definir"
+                    android:key="edit_anti_panico_aviso1_dir"
+                    android:summary="Incerte correo o número para sms"
+                    android:title="Aviso por Correo o SMS" />
+                <EditTextPreference
+                    android:hint="@string/hint_a_definir"
+                    android:inputType="textMultiLine|textShortMessage"
+                    android:key="edit_anti_panico_aviso1_mensaje"
+                    android:summary="Mensaje a enviar"
+                    android:title="Mensaje a enviar" />
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:key="anti_panico_aviso2"
+                android:summary="Defina el aviso 2"
+                android:title="Aviso 2" >
+                <EditTextPreference
+                    android:hint="@string/hint_a_definir"
+                    android:key="edit_anti_panico_aviso2_dir"
+                    android:summary="Incerte correo o número para sms"
+                    android:title="Aviso por Correo o SMS" />
+                <EditTextPreference
+                    android:hint="@string/hint_a_definir"
+                    android:inputType="textMultiLine|textShortMessage"
+                    android:key="edit_anti_panico_aviso2_mensaje"
+                    android:summary="Mensaje a enviar"
+                    android:title="Mensaje a enviar" />
+            </PreferenceScreen>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="emergencia"
+            android:summary="Defina a que teléfonos debe dar la emergencia (policía local, bomberos, su obra social)"
+            android:title="Emergencias" >
+            <EditTextPreference
+                android:hint="@string/hint_a_definir"
+                android:inputType="phone"
+                android:key="edit_tlf_emergencia"
+                android:summary="Config teléfono Emergencias"
+                android:title="Teléfono Emergencias" />
+            <EditTextPreference
+                android:hint="@string/hint_a_definir"
+                android:inputType="phone"
+                android:key="edit_tlf_policia"
+                android:summary="Config teléfono Policía"
+                android:title="Teléfono Policía" />
+            <EditTextPreference
+                android:hint="@string/hint_a_definir"
+                android:inputType="phone"
+                android:key="edit_tlf_bomberos"
+                android:summary="Config teléfono Bomberos"
+                android:title="Teléfono Bomberos" />
+            <EditTextPreference
+                android:hint="@string/hint_a_definir"
+                android:inputType="phone"
+                android:key="edit_tlf_ayuda_medica"
+                android:summary="Config teléfono Ayuda Médica"
+                android:title="Teléfono Ayuda Médica" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="bloquedo"
+            android:summary="Bloquee su TAG o el de su grupo familiar (requiere su clave master)"
+            android:title="Bloquedo" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="cambiar_clave"
+            android:summary="Cambiar la clave de su usuario"
+            android:title="Cambiar Clave" >
+            
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

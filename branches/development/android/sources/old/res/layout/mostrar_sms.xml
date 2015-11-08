@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/barra_gris_claro"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/layoutR_sms1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen_4"
+        android:background="@drawable/fonfo_sms" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sms_autor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4"
+                android:paddingLeft="@dimen/margen_4"
+                android:text="Autor: Juan Pepe"
+                android:textColor="@color/negro"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sms_texto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4"
+                android:paddingLeft="@dimen/margen_4"
+                android:text="Reunión"
+                android:textColor="@color/negro" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4" >
+
+                <TextView
+                    android:id="@+id/sms_fecha1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margen_4"
+                    android:layout_weight="1"
+                    android:text="Fecha: 3/5/2014"
+                    android:textColor="@color/negro"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sms_hora1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margen_4"
+                    android:text="Hora: 13:40"
+                    android:textColor="@color/negro"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_sms1"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/sms_nuevo"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutR_sms2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen_4"
+        android:background="@drawable/fonfo_sms"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sms_autor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4"
+                android:paddingLeft="@dimen/margen_4"
+                android:text="Autor: Juan Pepe"
+                android:textColor="@color/negro"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sms_texto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4"
+                android:paddingLeft="@dimen/margen_4"
+                android:text="Reunión"
+                android:textColor="@color/negro" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4" >
+
+                <TextView
+                    android:id="@+id/sms_fecha2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margen_4"
+                    android:layout_weight="1"
+                    android:text="Fecha: 3/5/2014"
+                    android:textColor="@color/negro"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sms_hora2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margen_4"
+                    android:text="Hora: 13:40"
+                    android:textColor="@color/negro"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_sms2"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/sms_nuevo"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutR_sms3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margen_4"
+        android:background="@drawable/fonfo_sms"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margen_4"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sms_autor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4"
+                android:paddingLeft="@dimen/margen_4"
+                android:text="Autor: Juan Pepe"
+                android:textColor="@color/negro"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sms_texto3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4"
+                android:paddingLeft="@dimen/margen_4"
+                android:text="Reunión"
+                android:textColor="@color/negro" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margen_4" >
+
+                <TextView
+                    android:id="@+id/sms_fecha3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margen_4"
+                    android:layout_weight="1"
+                    android:text="Fecha: 3/5/2014"
+                    android:textColor="@color/negro"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/sms_hora3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margen_4"
+                    android:text="Hora: 13:40"
+                    android:textColor="@color/negro"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_sms3"
+            android:layout_width="@dimen/ancho_iconos_eventos"
+            android:layout_height="@dimen/alto_iconos_eventos"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/sms_nuevo"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

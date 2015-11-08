@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_principal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo_gris"
+    android:orientation="vertical"
+    tools:context=".Principal" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/img_titulo"
+        android:layout_width="@dimen/ancho_titulo_principal"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_margin="@dimen/margen_4"
+        android:src="@drawable/titulo"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/img_lupa"
+        android:layout_width="@dimen/alto_titulo_principal"
+        android:layout_height="@dimen/alto_titulo_principal"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margen_4"
+        android:padding="9dp"
+        android:src="@drawable/lupa" />
+
+    <ListView
+        android:id="@+id/listV_eventos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_menu"
+        android:layout_below="@+id/img_titulo"
+        android:background="@color/blanco"
+        android:cacheColorHint="@color/blanco"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="none" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/espacio"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/alto_edit_usuario"
+        android:layout_above="@+id/layout_menu"
+        android:background="@color/barra_gris_claro"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <ImageView
+            android:id="@+id/img_anti_panc"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/alto_titulo_principal"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:src="@drawable/anti_panico" />
+
+        <ImageView
+            android:id="@+id/img_emergencia"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/alto_titulo_principal"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:src="@drawable/img_emergencia" />
+
+        <ImageView
+            android:id="@+id/img_config"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/alto_titulo_principal"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:src="@drawable/candado_config" />
+
+        <ImageView
+            android:id="@+id/img_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/alto_titulo_principal"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:src="@drawable/sms_vacio" />
+
+        <ImageView
+            android:id="@+id/img_info"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/alto_titulo_principal"
+            android:layout_margin="@dimen/margen_4"
+            android:layout_weight="1"
+            android:src="@drawable/info" />
+
+    </LinearLayout>
+
+</RelativeLayout>
