@@ -16,11 +16,16 @@ class Endpoint extends MyREST_Controller
     public function __construct()
     {
         parent::__construct();
+        //Formateo de Variables de Acuerdo al ID de sesion
+        session_start();
+        $activemail = $_SESSION['email'];
+
+
         if (empty($this->user_data)) {
             $this->response(array('status' => 0, 'error' => "Must be authenticated"), 403);
         }
-        $this->activeuser = $this->user_data->uid;
-        $this->activebuilding = sprintf('%04d', $this->user_data->building);
+        $this->activeuser = $_SESSION['user_id'];//$this->user_data->uid;
+        $this->activebuilding = $_SESSION['building'];//sprintf('%04d', $this->user_data->building);
         $this->activeuf = 'uf';
         $this->activecards = 'cards';
         $this->activeevents = 'events';
@@ -202,7 +207,7 @@ class Endpoint extends MyREST_Controller
                 . " IN (SELECT email FROM members WHERE id = $this->activeuser))) ";
         }
 
-        $searchevents = "SELECT $this->activeevents.* ,$this->activecards.* FROM $this->activeevents "
+        $searchevents = "SELECT evt_id, evt_date, evt_time, events.card_id, evt_info, evt_img, cards.username, DATE_FORMAT(evt_date,'%d/%m/%y') AS niceDate FROM $this->activeevents "
             . "LEFT JOIN $this->activecards ON $this->activeevents.card_id = $this->activecards.card_id "
             . $query_add . $query_plus;
         //$this->response($searchevents);
@@ -430,56 +435,28 @@ class Endpoint extends MyREST_Controller
 
     B02, B04, B06, B08, B10 = Salida con Pulsador => 9
          * */
-        switch ($type_id) {
-            case "S1":
-            case "S3":
-            case "S5":
-            case "S7":
-            case "S9":
-                return "1";
-            case "S2":
-            case "S4":
-            case "S8":
-            case "S10":
-                return "2";
-            case "V01":
-            case "V03":
-            case "V05":
-            case "V07":
-            case "V09":
-                return "3";
-            case "V02":
-            case "V04":
-            case "V06":
-            case "V08":
-            case "V10":
-                return "4";
+
+        preg_match('/([A-Z]{1,3})(\d*)/', $type_id, $matches);
+
+        $string = $matches[1];
+        $number = intval($matches[2]);
+
+        //print_r("String: $string"); print_r("Number: $number");
+        switch ($string) {
+            case "S":
+                return $number %2 == 0 ? "2" : "1";
+            case "V":
+                return $number %2 == 0 ? "4" : "3";
             case "INV":
                 return "5";
-            case "A01":
-            case "A03":
-            case "A05":
-            case "A07":
-            case "A09":
-                return "6";
-            case "E01":
-            case "E03":
-            case "E05":
-            case "E07":
-            case "E09":
-                return "7";
-            case "B01":
-            case "B03":
-            case "B05":
-            case "B07":
-            case "B09":
-                return "8";
-            case "B02":
-            case "B04":
-            case "B06":
-            case "B08":
-            case "B10":
-                return "9";
+            case "A":
+                if($number %2 != 0)
+                    return "6" ;
+            case "E":
+                if($number %2 != 0)
+                    return "7";
+            case "BT":
+                return $number %2 != 0 ? "8" : "9";
             default:
                 return "0";
         }
